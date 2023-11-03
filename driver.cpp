@@ -1,6 +1,6 @@
 // Author: Joshua Matni
 // CS 219 PA 2
-// Purpose: Implementing other operations in Assembly
+// Purpose: Bitwise and Arithmetic Operations Simulator
 
 #include <fstream>
 #include <iostream>
@@ -19,7 +19,7 @@ int main()
     string filename = "problems.txt"; 
     vector<Command> commands = readCommandsFromFile(filename);
 
-    for(const Command& cmd : commands)
+    for(const Command& cmd : commands) // for cmd in commands (range based)
     {
         ResultWithFlags result = executeCommand(cmd);
         cout << cmd.getOperation() << " 0x" << hex << uppercase << cmd.getOperand1();
