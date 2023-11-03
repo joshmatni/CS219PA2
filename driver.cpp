@@ -23,7 +23,7 @@ int main()
     {
         ResultWithFlags result = executeCommand(cmd);
         cout << cmd.getOperation() << " 0x" << hex << uppercase << cmd.getOperand1();
-        if (cmd.getOperation() != "NOT" && cmd.getOperation() != "NOTS")
+        if(cmd.getOperation() != "NOT" && cmd.getOperation() != "NOTS")
         { 
             cout << " 0x" << cmd.getOperand2();
         }
