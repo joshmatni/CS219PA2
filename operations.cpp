@@ -1,15 +1,17 @@
 #include "operations.h"
 
+// add
 ResultWithFlags Operations::add(uint32_t operand1, uint32_t operand2) 
 {
     uint64_t wide_result = static_cast<uint64_t>(operand1) + static_cast<uint64_t>(operand2);
     ResultWithFlags result;
-    result.result = static_cast<uint32_t>(wide_result); // Only the lower 32 bits
-    result.N = (result.result >> 31) & 1; // Negative flag is the sign bit
-    result.Z = (result.result == 0); // Zero flag is true if result is zero
+    result.result = static_cast<uint32_t>(wide_result);
+    result.N = (result.result >> 31) & 1;
+    result.Z = (result.result == 0);
     return result;
 }
 
+// and
 ResultWithFlags Operations::andOp(uint32_t operand1, uint32_t operand2) 
 {
     ResultWithFlags result;

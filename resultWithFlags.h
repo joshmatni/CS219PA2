@@ -1,8 +1,6 @@
 #ifndef RESULTWITHFLAGS_H
 #define RESULTWITHFLAGS_H
 
-#include <cstdint>
-
 class ResultWithFlags 
 {
     public:

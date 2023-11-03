@@ -19,15 +19,15 @@ int main()
     string filename = "problems.txt"; 
     vector<Command> commands = readCommandsFromFile(filename);
 
-    for(const Command& cmd : commands) // for cmd in commands (ranged based)
+    for(const Command& cmd : commands)
     {
         ResultWithFlags result = executeCommand(cmd);
-        cout << cmd.getOperation() << " 0x" << hex << uppercase << setw(8) << setfill('0') << cmd.getOperand1();
-        if (cmd.getOperation() != "NOT" && cmd.getOperation() != "NOTS") // NOT operations only have one operand
+        cout << cmd.getOperation() << " 0x" << hex << uppercase << cmd.getOperand1();
+        if (cmd.getOperation() != "NOT" && cmd.getOperation() != "NOTS")
         { 
-            cout << " 0x" << setw(8) << setfill('0') << cmd.getOperand2();
+            cout << " 0x" << cmd.getOperand2();
         }
-        cout << ": 0x" << setw(8) << setfill('0') << result.result << endl;
+        cout << ": 0x" << result.result << endl;
         cout << "N: " << result.N << " Z: " << result.Z << endl;
     }
 
@@ -77,7 +77,7 @@ ResultWithFlags executeCommand(const Command& cmd)
         return Operations::xorOp(operand1, operand2);
     }
 
-    return {0, false, false}; // return a default ResultWithFlags with N and Z set to false
+    return {0, false, false}; // return a default RWF
 }
 
 vector<Command> readCommandsFromFile(const string& filename)
