@@ -23,7 +23,7 @@ The program reads a list of commands from the `problems.txt` file. Each command 
 For the command `ADD 0x1 0xFFFFFFFF`, the result is `0x0`, and the Z flag is set to `1` indicating a zero result. The N flag is `0` since the result is not negative.
 
 ## Documentation
-The code is documented with comments explaining the purpose of each function and the logic behind the operations. The `Command` class encapsulates the details of a command, and the `Operations` class contains static methods for each operation, which return a `ResultWithFlags` object containing the result and the status of the N and Z flags.
+The `Command` class encapsulates the details of a command, and the `Operations` class contains static methods for each operation, which return a `ResultWithFlags` object containing the result and the status of the N and Z flags.
 
 ## Makefile
 The provided Makefile has the following targets:
