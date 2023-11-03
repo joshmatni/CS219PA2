@@ -8,10 +8,9 @@ This project simulates a set of bitwise and arithmetic operations on 32-bit inte
 ## How to Run the Code
 To compile and run the project, ensure that you have `g++` installed on your system and that it is available in your system's PATH.
 
-1. Unzip the project file `first-name_last-name_proj1.zip`.
-2. Navigate to the project directory in the terminal.
-3. Run `make` to compile the project. This will create an executable named `operating`.
-4. To run the executable, use the command `./operating`.
+1. Navigate to the project directory in the terminal.
+2. Run `make` to compile the project. This will create an executable named `operating`.
+3. To run the executable, use the command `./operating`.
 
 ## Results and Working Process
 The program reads a list of commands from the `problems.txt` file. Each command specifies an operation and the operands. The program then executes these commands and prints the results in hexadecimal format. The N flag is set if the result is negative (in the case of signed integers), and the Z flag is set if the result is zero.
@@ -28,9 +27,5 @@ The code is documented with comments explaining the purpose of each function and
 
 ## Makefile
 The provided Makefile has the following targets:
-- `all`: Compiles the source code into the `operating` executable.
+- `make`: Compiles the source code into the `operating` executable.
 - `clean`: Removes object files and the executable for a clean build.
-
-## Conclusion
-This project demonstrates the implementation of basic bitwise and arithmetic operations and the manipulation of flags that are commonly used in assembly language and low-level programming.
-
